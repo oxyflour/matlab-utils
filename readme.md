@@ -10,7 +10,7 @@ In Matlab, you have to write
 ```matlab
 go(bar(foo(obj, 1, 2), 3))
 ```
-With this helper function, you may want to write
+With this helper function, you can simply write
 ```matlab
 chain(obj, {
 	foo {1, 2}
@@ -26,13 +26,13 @@ In Matlab, when you want to save a complex variable, you may have to write
 y = [a b];
 save(file_name, 'y')
 ```
-With this helper, you may want to write
+With this helper, you can simple write
 ```matlab
 cache(file_name, [a b])
 ```
 
 
-###
+### more...
 More descriptions will be added later
 
 
