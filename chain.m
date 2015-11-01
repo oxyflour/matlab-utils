@@ -6,9 +6,19 @@ function x = chain(x, a)
 			if iscell(v)
 				v = v{:};
 			end
-			x = f(x, v);
+			if (nargout(f) > 0)
+				x = f(x, v);
+			else
+				f(x, v);
+				x = a;
+			end
 		else
-			x = f(x);
+			if (nargout(f) > 0)
+				x = f(x);
+			else
+				f(x);
+				x = a;
+			end
 		end
 	end
 end

@@ -4,7 +4,7 @@
 function val = cache(file, varargin)
 	if length(varargin) > 0
 		val = varargin{1};
-		savetxt(file, val);
+		save(file, 'val', '-ascii');
 	else
 		val = load(file);
 	end
